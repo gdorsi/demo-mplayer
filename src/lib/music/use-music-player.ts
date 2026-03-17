@@ -26,7 +26,7 @@ function uniqueTracks(tracks: Array<Track | null | undefined>) {
 }
 
 function resolveTrackUrl(track: Track | null | undefined) {
-  return track?.fileUrl || track?.file?.url || null;
+  return track?.musicTrackURL || track?.file?.url || null;
 }
 
 function useEventCallback<Args extends unknown[], Result>(

@@ -152,7 +152,7 @@ export async function uploadTracks(userId: string, files: FileList | File[]) {
         },
       },
     });
-    const fileUrl = fileData.data.$files[0]?.url;
+    const musicTrackURL = fileData.data.$files[0]?.url;
     const timestamp = Date.now();
 
     await db.transact(
@@ -162,7 +162,7 @@ export async function uploadTracks(userId: string, files: FileList | File[]) {
           originalFileName: metadata.originalFileName,
           ownerId: userId,
           fileId,
-          fileUrl: fileUrl ?? "",
+          musicTrackURL: musicTrackURL ?? "",
           durationMs: metadata.durationMs,
           waveform: metadata.waveform,
           createdAt: timestamp,

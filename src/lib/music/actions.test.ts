@@ -296,7 +296,7 @@ describe("InstantDB music actions", () => {
               originalFileName: "Summer Nights.mp3",
               ownerId: "user-1",
               fileId: "file-1",
-              fileUrl: "https://cdn.example/file-1",
+              musicTrackURL: "https://cdn.example/file-1",
               durationMs: 123_000,
               waveform: { samples: [0.1, 0.8] },
               createdAt: 1_710_000_000_000,

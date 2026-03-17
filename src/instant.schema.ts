@@ -22,7 +22,7 @@ const _schema = i.schema({
       originalFileName: i.string(),
       ownerId: i.string().indexed(),
       fileId: i.string().optional(),
-      fileUrl: i.string().optional(),
+      musicTrackURL: i.string().optional(),
       durationMs: i.number(),
       waveform: i.json<WaveformEnvelope>(),
       createdAt: i.number().indexed(),
