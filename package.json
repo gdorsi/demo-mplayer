@@ -6,11 +6,12 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "vitest run"
   },
   "dependencies": {
-    "@instantdb/react": "latest",
     "@instantdb/admin": "latest",
+    "@instantdb/react": "latest",
     "next": "15.4.10",
     "react": "19.1.0",
     "react-dom": "19.1.0"
@@ -21,7 +22,8 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "tailwindcss": "^4",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
   },
   "packageManager": "npm@11.8.0"
 }

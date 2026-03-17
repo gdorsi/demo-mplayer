@@ -1,20 +1,21 @@
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
-import './globals.css';
+import type { Metadata } from "next";
+import { IBM_Plex_Mono, Space_Grotesk } from "next/font/google";
+import "./globals.css";
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
+const displayFont = Space_Grotesk({
+  variable: "--font-display",
+  subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+const monoFont = IBM_Plex_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
 });
 
 export const metadata: Metadata = {
-  title: 'Create Instant App',
-  description: 'Instant DB Starter App',
+  title: "Instant Music Player",
+  description: "A private music player built with Next.js and InstantDB.",
 };
 
 export default function RootLayout({
@@ -24,9 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${displayFont.variable} ${monoFont.variable} antialiased`}>
         {children}
       </body>
     </html>
